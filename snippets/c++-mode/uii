@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: uii
+# key: uii
+# --
+`(det-cpp-ui-include-snippet)`

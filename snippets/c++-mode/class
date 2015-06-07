@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# key: class
+# name: class
+# --
+${2:$(det-cpp-forward-declare-qt-ui-class-snippet (yas-field-value 1))}
+
+class ${1:Name$(det-cpp-classname-snippet)} ${2:$(det-cpp-inheritance-snippet)} ${2:QObject$(det-cpp-baseclassname-snippet)}
+{
+${2:$(det-cpp-public-access-snippet)}
+${2:$(det-cpp-typedef-super-snippet (yas-field-value 2))}
+${2:$(det-cpp-explict-ctor-snippet (yas-field-value 2))} $1(${2:$(det-cpp-ctor-arg-decl-snippet (yas-field-value 2))});
+~$1();
+${2:$(det-cpp-private-access-snippet (yas-field-value 1))}
+$0
+};

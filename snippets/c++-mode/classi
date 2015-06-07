@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: classi
+# key: classi
+# --
+${1:UseDefault$(det-cpp-default-to-last-defined-cpp-class-snippet)}::$1(`(det-cpp-ctor-arg-def-snippet)`)
+${1:$(det-cpp-member-init-def-snippet)}
+$0
+}
+
+$1::~$1()
+{
+`(det-cpp-dtor-body-snippet)`
+}

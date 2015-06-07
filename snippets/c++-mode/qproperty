@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: qproperty
+# key: qproperty
+# --
+$0
+Q_PROPERTY(${1:qreal} ${2:fieldName} READ $2 WRITE set${2:$(capitalize yas-text)} NOTIFY $2Changed)
+$1 $2() const {return $2_;}
+void set${2:$(capitalize yas-text)}($1 v){$2_ = v;}
+void $2Changed();
+$1 $2_;
